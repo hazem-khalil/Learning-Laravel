@@ -9,6 +9,12 @@ use App\Http\Requests\RegisterationForm;
 
 class RegisterationController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
+
     public function create()
     {
     	return view('registeration.create');
